@@ -1,0 +1,19 @@
+.homepage header.scrolled {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.homepage header.c-header {
+   position: fixed;
+}
+
+.homepage header:not(.scrolled),
+.c-topnav__menu-item .c-topnav__menu-text.c-topnav__menu-text.c-topnav__menu-text {
+   background: rgba(0,0,0,0.0) !important;
+}
+
+.homepage header, .homepage #agentLogo {
+   transition: all .3s ease;
+}
+.homepage header:not(.scrolled) #agentLogo {
+   filter: brightness(0) invert(1);
+}

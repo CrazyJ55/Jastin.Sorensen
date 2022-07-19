@@ -1,0 +1,143 @@
+// ------------------------------------------------------------------
+// General
+// ------------------------------------------------------------------
+body {
+    color: $bodyFontColor;
+    font-size: $bodyFontSize;
+    font-family: $generalFont;
+}
+
+a {
+    text-transform: none;
+    color: $hyperlinkColor;
+
+    &:hover, 
+    &:active,
+    &:focus
+     {
+        color: $hyperlinkHoverColor;
+    }
+}
+
+.c-btn, .submit, .c-popup__submit{
+    color: $btnTextColor;
+    background: $btnBackgroundColor;
+    border: $borderWidth solid $borderColor;
+    border-radius: $btnBorderRadius;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-weight: 700;
+    text-align: center;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    margin: 20px 0 0;
+
+    &:hover, 
+    &:active,
+    &:focus
+     {
+        color: $btnTextHoverColor;
+        background: $btnBackgroundHoverColor;
+        border: $borderWidth solid $borderHoverColor;
+    }
+}
+
+.c-popup__modal:not(.has-background) .c-btn--ghost {
+    color: $btnTextColor;
+    background: $btnBackgroundColor !important;
+    border: $borderWidth solid $borderColor;
+    border-radius: $btnBorderRadius;
+
+    &:hover, 
+    &:active,
+    &:focus
+    {
+        color: $btnTextHoverColor;
+        background: $btnBackgroundHoverColor !important;
+        border: $borderWidth solid $borderHoverColor;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: $headingColor;
+    font-family: $headingFont;
+    text-transform: uppercase;
+
+    @media(min-width: 992px){
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: $hyperlinkColor;//$headingColor;
+
+        &:hover {
+        color: $hyperlinkHoverColor;
+        }
+
+    }
+}
+
+h2 {
+    font-size: $regHeaderFontSize;
+}
+
+.back-to-top {
+    background: $backToTop;
+    border-radius: 50%;
+}
+
+.c-event__date-box {
+    border-color: $primary;
+    .c-event-date--day{
+        color:$primary;
+    }
+}
+
+// // ------------------------------------------------------------------
+// // IOS Fixes
+// // ------------------------------------------------------------------
+
+input { 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+}
+
+.c-template__logo a {
+    align-items: center;
+ }
+ 
+// // ------------------------------------------------------------------
+// // Other Improvements
+// // ------------------------------------------------------------------
+
+ //Form fixes
+.contactForm label.error, .requestPrivacyForm label.error {
+    position: relative;
+    right: 0;
+}
+
+.contactForm h2, .requestPrivacyForm h2{
+    @media(max-width: 992px){
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.contactForm input[type="text"], .contactForm textarea {
+    font-family: $generalFont;
+    font-size: $bodyFontSize;
+    margin-top: 5px;
+}
+
+.c-input__wrapper label.error {
+    float: none;
+}
+
+//Resource Center Fixes
+.c-matter {
+    @media(max-width: 992px){
+        padding: 0 15px;
+    }
+}
